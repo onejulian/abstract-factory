@@ -18,25 +18,19 @@ type ArtDecoSofa struct {
 }
 
 func (a *ArtDeco) CreateChair() furnitures.IChair {
-	chair := new(furnitures.Chair)
+	chair := new(ArtDecoChair)
 	chair.SetName("Art Deco Chair")
-	return &ArtDecoChair{
-		Chair: *chair,
-	}
+	return chair
 }
 
 func (a *ArtDeco) CreateCoffeeTable() furnitures.ICoffeeTable {
-	coffeeTable := new(furnitures.CoffeeTable)
+	coffeeTable := new(ArtDecoCoffeeTable)
 	coffeeTable.SetName("Art Deco Coffee Table")
-	return &ArtDecoCoffeeTable{
-		CoffeeTable: *coffeeTable,
-	}
+	return coffeeTable
 }
 
 func (a *ArtDeco) CreateSofa() furnitures.ISofa {
-	sofa := new(furnitures.Sofa)
+	sofa := new(ArtDecoSofa)
 	sofa.SetName("Art Deco Sofa")
-	return &ArtDecoSofa{
-		Sofa: *sofa,
-	}
+	return sofa
 }

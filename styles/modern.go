@@ -18,25 +18,19 @@ type ModernSofa struct {
 }
 
 func (m *Modern) CreateChair() furnitures.IChair {
-	chair := new(furnitures.Chair)
+	chair := new(ModernChair)
 	chair.SetName("Modern Chair")
-	return &ModernChair{
-		Chair: *chair,
-	}
+	return chair
 }
 
 func (m *Modern) CreateCoffeeTable() furnitures.ICoffeeTable {
-	coffeeTable := new(furnitures.CoffeeTable)
+	coffeeTable := new(ModernCoffeeTable)
 	coffeeTable.SetName("Modern Coffee Table")
-	return &ModernCoffeeTable{
-		CoffeeTable: *coffeeTable,
-	}
+	return coffeeTable
 }
 
 func (m *Modern) CreateSofa() furnitures.ISofa {
-	sofa := new(furnitures.Sofa)
+	sofa := new(ModernSofa)
 	sofa.SetName("Modern Sofa")
-	return &ModernSofa{
-		Sofa: *sofa,
-	}
+	return sofa
 }
